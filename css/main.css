@@ -35,3 +35,30 @@ body {
   background: var(--lightBlue);
 }
 */
+
+*:root {
+  --mainWhite: rgb(255, 255, 255);
+  --mainGray: rgb(204, 204, 204);
+  --secondaryColor: rgb(79, 221, 209);
+  --mainBlack: rgb(12, 12, 12);
+}
+
+body {
+  display: grid;
+  margin: 0;
+  background: var(--mainGray);
+  height: 100vh;
+  width: 100vw;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 0.75fr 2fr 0.75fr;
+  grid-template-areas: ".. .. .." ".. box .." ".. .. ..";
+}
+
+.counter-box {
+  grid-area: box;
+  border: none;
+  background: var(--mainWhite);
+  display: block;
+  padding: 10px;
+  text-align: center;
+}
